@@ -22,10 +22,17 @@ public class BoardServiceImpl implements BoardService {
 	}
 	
 	// 게시물 목록 조회
-		@Override
-		public List<BoardVO> list() throws Exception {
+	@Override
+	public List<BoardVO> list() throws Exception {
 
-			return dao.list();
-		}
+		return dao.list();
+	}
+		
+	// 게시물 조회
+	@Override
+	public BoardVO read(int bno) throws Exception {
+
+		return dao.read(bno);
+	}
 
 }

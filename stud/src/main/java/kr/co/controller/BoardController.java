@@ -39,15 +39,25 @@ public class BoardController {
 	}
 	
 	// 게시판 목록 조회
-		@RequestMapping(value = "/list", method = RequestMethod.GET)
-		public String list(Model model) throws Exception{
-			logger.info("list");
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String list(Model model) throws Exception{
+		logger.info("list");
 			
-			model.addAttribute("list",service.list());
+		model.addAttribute("list",service.list());
 			
 			
-			return "board/list";
+		return "board/list";
 			
 		}
+		
+	// 게시판 조회
+	@RequestMapping(value = "/readView", method = RequestMethod.GET)
+	public String read(BoardVO boardVO, Model model) throws Exception{
+		logger.info("read");
+			
+		model.addAttribute("read", service.read(boardVO.getBno()));
+			
+		return "board/readView";
+	}
 	
 }
