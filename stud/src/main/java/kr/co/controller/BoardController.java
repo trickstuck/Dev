@@ -31,24 +31,7 @@ public class BoardController {
 	
 	@Inject
 	ReplyService replyService;
-	
-	// 게시판 글 작성 화면
-	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
-	public void writeView() throws Exception{
-		logger.info("writeView");
 		
-	}
-	
-	// 게시판 글 작성
-	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
-	public String write(BoardVO boardVO) throws Exception{
-		logger.info("write");
-		
-		service.write(boardVO);
-		
-		return "redirect:/board/list";
-	}
-	
 	// 게시판 목록 조회
 		@RequestMapping(value = "/list", method = RequestMethod.GET)
 		public String list(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception{
@@ -191,5 +174,16 @@ public class BoardController {
 			
 			return "redirect:/board/readView";
 		}
-	
+		
+		//메인 화면 뷰
+		@RequestMapping(value = "/mainView", method = RequestMethod.GET)
+		public String main() throws Exception{
+			logger.info("main");
+			
+			return "board/mainView";
+			
+		}
+		
+		
+		
 }

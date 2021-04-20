@@ -1,22 +1,16 @@
 package kr.co.vo;
 
-import java.util.Date;
 
 public class BoardVO {
 	
 	private int bno;
-	private String title;
-	private String content;
-	private String writer;
-	private Date regdate;
-
-
 	private String lineno;
 	private String stname;
 	private String devide;
 	private String location;
 	private String call;
-	
+	private String llocation;
+	private String tlocation;
 	
 	public String getLineno() {
 		return lineno;
@@ -49,38 +43,23 @@ public class BoardVO {
 		this.call = call;
 	}
 	
-	
-	
 	public int getBno() {
 		return bno;
 	}
 	public void setBno(int bno) {
 		this.bno = bno;
 	}
-	public String getTitle() {
-		return title;
+	public String getLlocation() {
+		return llocation;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setLlocation(String llocation) {
+		this.llocation = llocation;
 	}
-	public String getContent() {
-		return content;
+	public String getTlocation() {
+		return tlocation;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setTlocation(String tlocation) {
+		this.tlocation = tlocation;
 	}
-	public String getWriter() {
-		return writer;
-	}
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
-	public Date getRegdate() {
-		return regdate;
-	}
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
-	}
-
 	
 }
