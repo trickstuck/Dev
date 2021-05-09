@@ -10,7 +10,6 @@ public class BoardVO {
 	private String location;
 	private String call;
 	private String llocation;
-	private String tlocation;
 	
 	public String getLineno() {
 		return lineno;
@@ -49,17 +48,13 @@ public class BoardVO {
 	public void setBno(int bno) {
 		this.bno = bno;
 	}
+	/*
 	public String getLlocation() {
 		return llocation;
 	}
 	public void setLlocation(String llocation) {
 		this.llocation = llocation;
 	}
-	public String getTlocation() {
-		return tlocation;
-	}
-	public void setTlocation(String tlocation) {
-		this.tlocation = tlocation;
-	}
-	
+	*/
+
 }

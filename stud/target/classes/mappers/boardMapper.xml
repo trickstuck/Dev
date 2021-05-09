@@ -40,14 +40,14 @@
 	
 	<select id="read" parameterType="int" resultType="kr.co.vo.BoardVO">
 		SELECT	BNO
-			  , SUBINFO.LINENO
-			  , SUBINFO.STNAME
+			  , LINENO
+			  , STNAME
 			  , LOCATION
 			  , CALL
-			  , LLOCATION
-		 FROM SUBINFO, LOCKERINFO
-		 WHERE BNO = #{bno} AND LOCKERINFO.STNAME IN SUBINFO.STNAME
+		 FROM SUBINFO
+		 WHERE BNO = #{bno}
 	</select>
+	
 	
 	<update id="update" parameterType="kr.co.vo.BoardVO">
 		UPDATE SUBINFO
@@ -64,4 +64,18 @@
 		 WHERE BNO = #{bno}
 	</delete>
 	
+	<!-- 추후 연구용 주석
+	<select id="read2" parameterType="int" resultType="kr.co.vo.BoardVO">
+            SELECT BNO, STNAME, LLOCATION
+            FROM(
+                SELECT SINFO2.BNO, SINFO2.STNAME, LOCKERINFO.LLOCATION
+		 	    FROM SINFO2 , LOCKERINFO
+                WHERE LOCKERINFO.STNAME LIKE SINFO2.STNAME || '%'
+                group by SINFO2.BNO, SINFO2.STNAME, LOCKERINFO.LLOCATION
+                )
+            WHERE BNO = #{bno}
+	</select>
+	
+	 -->
+		
 </mapper>
