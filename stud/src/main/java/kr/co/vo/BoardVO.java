@@ -9,7 +9,7 @@ public class BoardVO {
 	private String devide;
 	private String location;
 	private String call;
-	private String llocation;
+	// private String llocation;
 	
 	public String getLineno() {
 		return lineno;
@@ -56,5 +56,4 @@ public class BoardVO {
 		this.llocation = llocation;
 	}
 	*/
-
 }

@@ -3,7 +3,7 @@
 <html>
 
 <script>
-    window.self.location = "/board/list";
+    window.self.location = "/board/mainView";
 </script>
 
 <head>

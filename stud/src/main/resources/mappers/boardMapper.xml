@@ -53,7 +53,7 @@
 		UPDATE SUBINFO
 		   SET LINENO    =   #{lineno},
 		   	   STNAME  =   #{stname},
-		   	   LOCATION  =   #{location}
+		   	   LOCATION  =   #{location},
 		   	   CALL  =   #{call}
 		 WHERE BNO = #{bno} 
 	</update>
